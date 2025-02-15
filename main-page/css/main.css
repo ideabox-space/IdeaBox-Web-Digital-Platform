@@ -1,0 +1,130 @@
+.hide-mobile{
+    display: None;
+}
+
+body{
+    background: #0E0216;
+    margin: 0;
+    font-family: 'Raleway';
+}
+
+.wrap{
+    margin: 1em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    background: #031F30;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 35%;
+    margin: 0;
+    list-style: None;
+    text-align: right;
+    padding: 2em;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+
+    li{
+        margin: 2em 0;
+
+        &:nth-of-type(1){
+            margin-bottom: 2.5em;
+        }
+
+        a{
+            color:  white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+
+            &:hover{
+                color: #8EF0DD;
+            }
+        }
+    }
+}
+
+.open{
+    transform: translateX(0%);
+}
+
+h1, p{
+    text-align: center;
+    color: white;
+}
+
+h1{
+    margin-top: 3em;
+    line-height: 1.2em;
+    font-size: 3em;
+    
+    img{
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+}
+
+p{
+    line-height: 1.5em;
+}
+
+@media (min-width: 1200px){
+    /* body{
+        background: black;
+    } */
+
+    .wrap{
+        margin: 0 4em;
+    }
+
+    .hide-desktop{
+        display: none;
+    }
+
+    .hide-mobile{
+        display: block;
+    }
+
+    .header-left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+
+        .divider{
+            height: 25px;
+            width: 1px;
+            border-right: 1.5px solid white;
+        }
+
+        .home-button{
+            color: white;
+            text-decoration: none;
+            font-family: 'Raleway';
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+
+    nav ul{
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 1.5em;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+
+        li a{
+            font-size: 1.2em;
+        }
+    }
+}
