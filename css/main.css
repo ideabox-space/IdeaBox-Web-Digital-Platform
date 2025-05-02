@@ -1,0 +1,247 @@
+/* Font Section */
+* {
+    font-family: 'Raleway';
+}
+
+
+footer{
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.main-cta h1{
+    margin-top: 40px;
+    line-height: 1.2em;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+
+    img{
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+}
+
+.main-cta p{
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.product-section h2{
+    color: white;
+    text-align: center;
+}
+
+.product-section p{
+    color: white;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.85em;
+}
+
+/* Content Styling Section */
+body{
+    background: #0E0216;
+    background-blend-mode: overlay;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.7em;
+    margin-left: 0;
+}
+
+.wrap{
+    position: relative;
+    margin: 1em;
+    z-index: 2;
+}
+
+.background-color{
+    position: absolute;
+    z-index: 1;
+    
+    img{
+        max-width: 110%;
+    }
+}
+
+.main-cta{
+    margin-top: 12%;
+}
+
+.product-section{
+    margin-top: 150px;
+}
+
+/* Navigation Bar Section */
+nav ul{
+    background: #031F30;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 35%;
+    margin: 0;
+    list-style: None;
+    text-align: right;
+    padding: 1em;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    font-size: 1rem;
+
+
+    li{
+        margin: 2em 0.1em;
+
+        &:nth-of-type(1){
+            margin-bottom: 2.5em;
+        }
+
+        a{
+            color:  white;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover{
+                color: #8EF0DD;
+            }
+        }
+    }
+}
+
+/* Screen Adjust Section */
+.hide-mobile{
+    display: None;
+}
+
+.open{
+    transform: translateX(0%);
+}
+
+@media (min-width: 1200px){
+    .wrap{
+        margin: 0 0 0 1.5em;
+    }
+
+    .hide-desktop{
+        display: none;
+    }
+
+    .hide-mobile{
+        display: block;
+    }
+
+    .header-left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+    }
+
+    nav ul{
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 1.5em;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+
+        li a{
+            font-size: 1em;
+        }
+    }
+}
+
+/* Product Section */
+
+.product-container{
+    margin-top: 50px;
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.card{
+    position: relative;
+    list-style: none;
+    width: 220px;
+    transition: .3s ease;
+}
+
+.card::before{
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+    height: 50px;
+}
+
+.card-background{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(.9) saturate(.2) contrast(0.5);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: 0.3s ease;
+}
+
+.card:hover .card-background{
+    transform: scale(1.10);
+    background-size: 260px;
+}
+
+.product-container:hover .card:not(:hover){
+    transform: scale(.9);
+}
+
+.product-container:hover > .card:not(:hover) .card-background,
+.product-container:hover > .card:not(:hover) .card-category{
+    filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.content{
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-heading{
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    margin-bottom: 4px;
+}
+
+.card-category{
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-transform: capitalize;
+}
