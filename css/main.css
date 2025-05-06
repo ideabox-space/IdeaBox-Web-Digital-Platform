@@ -41,6 +41,14 @@ footer{
     font-size: 0.85em;
 }
 
+.main-text h1{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20%;
+    line-height: 1.2em;
+}
+
 /* Content Styling Section */
 body{
     background: #0E0216;
@@ -72,16 +80,12 @@ footer{
     z-index: 1;
     
     img{
-        max-width: 110%;
+        max-width: 100%;
     }
 }
 
 .main-cta{
     margin-top: 12%;
-}
-
-.product-section{
-    margin-top: 150px;
 }
 
 /* Navigation Bar Section */
@@ -91,8 +95,8 @@ nav ul{
     z-index: 999;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 35%;
+    height: 100%;
+    width: 25%;
     margin: 0;
     list-style: None;
     text-align: right;
@@ -166,6 +170,10 @@ nav ul{
 }
 
 /* Product Section */
+.product-section{
+    margin-top: 250px;
+    margin-bottom: 20px;
+}
 
 .product-container{
     margin-top: 50px;
@@ -199,7 +207,7 @@ nav ul{
     left: 0;
     top: 0;
     border-radius: 20px;
-    background-size: 350px;
+    background-size: cover;
     background-position: center;
     filter: brightness(.9) saturate(.2) contrast(0.5);
     transform-origin: bottom;

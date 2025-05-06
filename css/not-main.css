@@ -1,0 +1,52 @@
+/* Font Section */
+* {
+    font-family: 'Raleway';
+}
+
+footer{
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.main-text{
+    color: white;
+    font-size: 17px;
+}
+
+/* Content Styling Section */
+body{
+    background: #0E0216;
+    background-blend-mode: overlay;
+}
+
+.background-color-notindex {
+    position: absolute;
+    z-index: -1;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    img{
+        max-width: 80%;
+    }
+}
+
+.wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.7em;
+    margin-left: 0;
+}
