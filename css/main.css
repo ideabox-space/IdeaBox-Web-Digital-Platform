@@ -226,6 +226,7 @@ nav ul{
     margin-right: 5px;
     position: relative;
     z-index: 1;
+    text-decoration: none;
 }
 
 .card-heading{
