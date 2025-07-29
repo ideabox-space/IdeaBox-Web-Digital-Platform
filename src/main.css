@@ -12,34 +12,11 @@ nav ul{
 }
 
 /* Screen Adjust Section */
-.hide-mobile{
-    display: None;
-}
-
 .open{
     transform: translateX(0%);
 }
 
 @media (min-width: 1200px){
-    .wrap{
-        margin: 0 0 0 1.5em;
-    }
-
-    .hide-desktop{
-        display: none;
-    }
-
-    .hide-mobile{
-        display: block;
-    }
-
-    .header-left{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1em;
-    }
-
     nav ul{
         position: unset;
         background: none;
@@ -52,9 +29,6 @@ nav ul{
 }
 
 .card{
-    position: relative;
-    list-style: none;
-    width: 220px;
     transition: .3s ease;
 }
 
@@ -67,12 +41,6 @@ nav ul{
 }
 
 .card-background{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    border-radius: 20px;
     background-size: cover;
     background-position: center;
     filter: brightness(.9) saturate(.2) contrast(0.5);
