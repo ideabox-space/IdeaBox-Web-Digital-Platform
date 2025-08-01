@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaBox</title>
+    <link rel="icon" type="image/x-icon" href="..\image-assets\favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#0E0216]">
+    <!-- Background Color -->
+    <a href="#" class="absolute z-10">
+        <img src="image-assets/Background%20Gradient.svg" alt="background color" class="max-w-full"/>
+    </a>
+    
+    <!-- Content Wrapper -->
+    <div class="relative z-20 mt-[1.5em] mx-[1em] p-[0.5em]">
+        
+        <!-- Header Website -->
+        <header class="flex justify-between">
+            <!-- logo on header -->
+            <div>
+                <a href="index.html">
+                    <img src="image-assets/Logo%20White%20(Size%20L).svg" alt="IdeaBox Logo" class="h-8">
+                </a>
+            </div>
+
+            <!-- navigation bar -->
+            <nav>
+                <a href="#" class="menu-open block md:hidden">
+                    <img src="image-assets/hamburger%20menu.svg" alt="Open menu" class="w-8 h-8">
+                </a>
+                <ul class="fixed bg-[#031F30] w-1/2 h-full top-0 right-0 text-[1.1rem] text-right list-none space-y-3.5 z-50 px-[1em]">
+                    <li class="block md:hidden my-[2em]">
+                        <a href="#" class="menu-close text-white no-underline font-bold">
+                            <img src="image-assets/close%20icon.svg" alt="Close menu" class="w-[40px] h-[40px]">
+                        </a>
+                    </li>
+                    <li><a class="text-white no-underline font-bold hover:text-[#8EF0DD]" href="coming-soon.html">Products</a></li>
+                    <li><a class="text-white no-underline font-bold hover:text-[#8EF0DD]" href="coming-soon.html">About Us</a></li>
+                    <li><a class="text-white no-underline font-bold hover:text-[#8EF0DD]" href="coming-soon.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="relative z-20 mt-[5em] mx-[1em] p-[0.5em]">
+            <div class="mt-[12%]">
+                <!-- main text coming soon -->
+                <h1 class="text-white text-5xl text-center font-bold leading-[1.2em]">
+                    This Page Will Be Coming For</br>
+                    You Very Soon!
+                    <div class="w-[60px] h-[60px] bg-[#863687] hover:bg-[#4FE8C9] inline-block align-middle rounded-xl  transition ease-in">
+                        <h1 class="font-bold">😁</h1>
+                    </div>
+                </h1>
+            </div>
+        </div>
+
+        <!-- feedback card -->
+        <div>
+            <h2 class="text-transparent text-[2em] text-center font-bold bg-linear-to-br from-[#672BDE] to-[#4FE8C9] bg-clip-text mt-[300px] mb-[10px]">
+                Send Us Your Feedback📨
+            </h2>
+            <p class="text-white text-[0.85em] text-center leading-[1.5em]">
+            In order to keep improving our products and services, we listen to everyone's feedback.
+            </p>
+            <div class="mx-auto max-w-2xl">
+                <div class="relative z-10 rounded-xl bg-neutral-900 border-neutral-700 mt- p-4 sm:mt-10 md:p-10">
+                    <!-- feedback form -->
+                    <form>
+                        <div class="mb-4 sm:mb-8">
+                            <label for="hs-feedback-post-comment-name-1" class="block mb-2 text-sm font-medium text-white">Your name (optional)</label>
+                            <input type="text" id="hs-feedback-post-comment-name-1" class="block w-full sm:text-sm focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none bg-neutral-900 border-neutral-700 text-neutral-400 placeholder-neutral-500 focus:ring-neutral-600 py-2.5 sm:py-3 px-4" placeholder="Full name">
+                        </div>
+
+                        <div class="mb-4 sm:mb-8">
+                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium text-white">Email address</label>
+                            <input type="email" id="hs-feedback-post-comment-email-1" class="block w-full rounded-lg sm:text-sm focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none bg-neutral-900 border-neutral-700 text-neutral-400 placeholder-neutral-500 focus:ring-neutral-600 py-2.5 sm:py-3 px-4" placeholder="Email address">
+                        </div>
+
+                        <div>
+                            <label for="hs-feedback-post-comment-textarea-1" class="block mb-2 text-sm font-medium text-white">Feedback</label>
+                            <div class="mt-1">
+                                <textarea id="hs-feedback-post-comment-textarea-1" name="hs-feedback-post-comment-textarea-1" rows="3" class="block w-full rounded-lg sm:text-sm focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none bg-neutral-900 border-neutral-700 text-neutral-400 placeholder-neutral-500 focus:ring-neutral-600 py-2.5 sm:py-3 px-4" placeholder="Leave your comment here..."></textarea>
+                        </div>
+
+                        <div class="mt-6 grid">
+                            <button type="submit" class="w-full inline-flex justify-center items-center text-sm text-white font-medium rounded-lg border border-transparent bg-blue-600 hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none gap-x-2 py-3 px-4">Submit</button>
+                        </div>
+                    </form>
+                    <!-- end feedback form -->
+                </div>
+            </div>
+        </div>
+        <!-- end feedback card -->
+
+        <!-- Footer Website -->
+        <footer class="block fixed bottom-0 text-white text-[0.7em] text-center leading-[1.5em] ml-0">
+            <p>
+                Property of IdeaBox
+            </p>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
