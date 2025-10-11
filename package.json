@@ -5,13 +5,26 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/output.css --watch",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdnanBayu/IdeaBox-Web-Digital-Platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdnanBayu/IdeaBox-Web-Digital-Platform/issues"
+  },
+  "homepage": "https://github.com/AdnanBayu/IdeaBox-Web-Digital-Platform#readme"
 }
