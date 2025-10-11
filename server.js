@@ -18,16 +18,26 @@ app.use(express.static(path.join(__dirname, 'src/public')));
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
-app.set('views', './src/views');
+app.set('views', path.join(__dirname, 'src/views'));
 
 // Routes
 app.use('/', userRoutes);
 
-// Start the server
-app.listen(port, (err) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(`Server is started at port ${port}`);
-    }
+// 404 handler
+app.use((req, res) => {
+    res.status(404).send('Page not found');
 });
+
+// Only start server if not in serverless environment
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(`Server is started at port ${port}`);
+        }
+    });
+}
+
+// Export for Vercel
+module.exports = app;
