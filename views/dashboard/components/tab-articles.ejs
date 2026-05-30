@@ -1,0 +1,32 @@
+<!-- Tab: Articles Management -->
+
+<div id="tab-articles" class="hidden space-y-6">
+
+  <!-- Subheader -->
+  <div class="flex justify-between items-center">
+
+    <!-- Header title -->
+    <h2 class="text-xl font-bold tracking-tight">Insights Articles</h2>
+
+    <!-- Button create article -->
+    <button onclick="openArticleModal()" class="
+      flex items-center gap-2 px-5 py-2.5
+      bg-[#8EF0DD] shadow-sm
+      hover:bg-[#8EF0DD]/90 transition transform active:scale-95 
+      text-[#154D41] font-bold text-sm
+      rounded-xl
+      ">
+      <i data-lucide="plus"></i>
+      Create Article
+    </button>
+  </div>
+
+  <!-- Table articles -->
+  <%- include('table-articles') %>
+</div>
+
+<!-- Article Add/Edit Section -->
+<%- include('edit-article') %>
+
+  <%- include('../scripts/script-articles-categories') %>
+    <%- include('../scripts/script-articles-crud') %>

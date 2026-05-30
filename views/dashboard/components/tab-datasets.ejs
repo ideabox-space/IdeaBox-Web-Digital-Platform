@@ -1,0 +1,31 @@
+<!-- Tab: Datasets Management -->
+
+<div id="tab-datasets" class="space-y-6">
+
+  <!-- Sub-header -->
+  <div class="flex justify-between items-center">
+
+    <!-- Header title -->
+    <h2 class="text-xl font-bold tracking-tight">Dataset Files</h2>
+
+    <!-- Button add dataset -->
+    <button onclick="openDatasetModal()" class="
+      flex items-center gap-2 px-5 py-2.5
+      bg-[#8EF0DD] shadow-sm
+      transition transform active:scale-95 hover:bg-[#8EF0DD]/90 
+      text-[#154D41] font-bold text-sm 
+      rounded-xl
+      ">
+      <i data-lucide="plus"></i>
+      Add Dataset
+    </button>
+  </div>
+
+  <!-- Table datasets -->
+  <%- include('table-datasets') %>
+</div>
+
+<!-- Dataset Add/Edit Section -->
+<%- include('edit-dataset') %>
+
+  <%- include('../scripts/script-datasets-crud') %>

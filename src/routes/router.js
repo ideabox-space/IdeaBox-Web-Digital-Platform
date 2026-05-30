@@ -1,39 +1,41 @@
 const express = require('express');
 const router = express.Router();
-const homeRoutes = require('./homeRouter');
-const comingsoonRoutes = require('./comingsoonRouter');
-const errorRoutes = require('./errorRouter');
-const profileRoutes = require('./profileRouter');
-const insightsRoutes = require('./insightsRouter');
-const insightsApiRoutes = require('./insightsApiRouter');
-const datasetRoutes = require('./datasetRouter');
-const datasetApiRoutes = require('./datasetApiRouter');
-const aiRoutes = require('./aiRouter');
-const chatbotApiRouter = require('./chatbotApiRouter');
-const requestRoutes = require('./requestRouter');
-const feedbackformRoutes = require('./feedbackformRouter');
-const requestformRoutes = require('./requestformRouter');
-const dashboardRoutes = require('./dashboardRouter');
-const uploadApiRoutes = require('./uploadR2ApiRouter');
 
-router.use('/', homeRoutes);
-router.use('/', requestRoutes);
-router.use('/', profileRoutes);
+const homePageRoutes = require('./pageRoute/homePageRouter');
+const comingsoonPageRoutes = require('./pageRoute/comingsoonPageRouter');
+const errorPageRoutes = require('./pageRoute/errorPageRouter');
+const profilePageRoutes = require('./pageRoute/profilePageRouter');
+const insightsPageRoutes = require('./pageRoute/insightsPageRouter');
+const datasetPageRoutes = require('./pageRoute/datasetPageRouter');
+const chatbotPageRoutes = require('./pageRoute/chatbotPageRouter');
+const requestPageRoutes = require('./pageRoute/requestPageRouter');
+const dashboardPageRoutes = require('./pageRoute/dashboardPageRouter');
 
-router.use('/', insightsRoutes);
-router.use('/', insightsApiRoutes);
-router.use('/', datasetRoutes);
-router.use('/', datasetApiRoutes);
-router.use('/', aiRoutes);
-router.use('/', chatbotApiRouter);
+const requestformRoutes = require('./apiRoute/requestformRouter');
+const feedbackformRoutes = require('./apiRoute/feedbackformRouter');
+
+const insightsApiRoutes = require('./apiRoute/insightsApiRouter');
+const datasetApiRoutes = require('./apiRoute/datasetApiRouter');
+const chatbotApiRoutes = require('./apiRoute/chatbotApiRouter');
+const uploadApiRoutes = require('./apiRoute/uploadR2ApiRouter');
+
+
+router.use('/', homePageRoutes);
+router.use('/', requestPageRoutes);
+router.use('/', profilePageRoutes);
+router.use('/', insightsPageRoutes);
+router.use('/', datasetPageRoutes);
+router.use('/', chatbotPageRoutes);
+router.use('/', dashboardPageRoutes);
+router.use('/', comingsoonPageRoutes);
+router.use('/', errorPageRoutes);
 
 router.use('/', feedbackformRoutes);
 router.use('/', requestformRoutes);
 
-router.use('/', comingsoonRoutes);
-router.use('/', errorRoutes);
-
-router.use('/', dashboardRoutes);
+router.use('/', insightsApiRoutes);
+router.use('/', datasetApiRoutes);
+router.use('/', chatbotApiRoutes);
 router.use('/', uploadApiRoutes);
 
 module.exports = router;
